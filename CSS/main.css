@@ -1,86 +1,283 @@
+
 body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-    perspective: 1000px;
-}
-    /* flip the pane when hovered */
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
-        transform: rotateY(180deg);
+      background-image: url("homepage.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 1510px 900px;
     }
+/* Global styles
+------------------------------------*/
 
-.flip-container, .front, .back {
-    width: 320px;
-    height: 480px;
+.content {
+  color: black; 
+  font-weight: normal;
+  font-size: 15px;
+  text-align: left;
+}
+.general {
+  color: blue; 
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+}
+.formContainer {
+ background-color: white;
+ opacity:90%;
+ margin: 15px;
+ padding: 5px 20px 15px 20px;
+ border: 1px solid rgb(191, 246, 250);
+ border-radius: 3px;
+}
+.title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+}
+.orderConfirmation {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+  text-align: center;
+}
+.button {
+  background-color: Orange;
+  color: white;
+  padding: 5px 8px 5px 8px;
+  margin: 6px 0;
+  cursor: pointer;
+  width: 12%;
+  opacity: 0.9;
+}
+.sideWindow {
+  width:300px;
+  height:550px;
+  background-color: black;
+  opacity:85%;
+  padding:35px;
+}
+.sideWindow h2{
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 80px;
+}
+.sideWindow h4,h6{
+  text-align: center;
+  font-weight: 80px;
+  color: white;
+}
+.hmContainer {
+  color: black; 
+  font-weight: normal;
+  float: right;
+  font-size: 30px;
+  text-align: left;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
 }
 
-/* flip speed goes here */
-.flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-
-    position: relative;
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  font-color: red;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
 }
 
-/* hide back of pane during swap */
-.front, .back {
-    backface-visibility: hidden;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-/* front pane, placed above back */
-.front {
-    z-index: 2;
-    /* for firefox 31 */
-    transform: rotateY(0deg);
+.dropdown-link {
+  color: red;
 }
 
-/* back, initially hidden pane */
-.back {
-    transform: rotateY(180deg);
+.dropdown-link:hover {
+  color: white;
 }
+
+/* this is not currently used
+.inventoryTable{
+  position: absolute;
+  text-align: center;
+}
+*/
+
+/*
+.split {
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+*/
+
+}
+.vl{
+  border-left: 1px;
+  height: 100%;
+  position:absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 14%;
+}
+.right{
+  right:0;
+}
+.navbar{
+      background-color: black !important; 
+}
+
+.navbar-brand{
+    color: red !important;
+    font: Verdana !important;
+}
+
+.nav-link{
+      color: red !important;
+      font: Verdana !important;
+}
+
+.dropbtn{
+  color: red !important;
+  font: Verdana !important;
+}
+
+input[type=text], input[type=password] {
+  width: 40%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Set a style for the submit button */
+input[type=submit] {
+  background-color: Orange;
+  color: white;
+  padding: 5px 8px 5px 8px;
+  margin: 6px 0;
+  border: none;
+  cursor: pointer;
+  width: 12%;
+  opacity: 0.9;
+}
+
+.cart_page{
+      margin:80px auto;
+    }
+.cart_pic{
+      display: flex;
+      flex-wrap: wrap;
+    }
+/*
+.row {
+  border: 3px solid green;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  border: 2px solid blue;
+  padding: 10px;
+  }
+  */
+
+  th, td {
+    padding: 10px;
+  }
+
+  th {
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+  }
+  td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px
+  }
+  td img{
+    width:80px;
+    height:80px;
+    margin-right: 10px;
+  }
+  html {
+    box-sizing: border-box;
+
+  }
+  img {
+  max-width: 30%;
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  h1, h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    margin: 0;
+  }
+  .content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+ 
+  .item-details h3 + p {
+    font-style: italic;
+  }
+  .item-details h3 ~ p {
+    margin: 0;
+  }
+  .divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+  }
+  .divider > section:last-of-type {
+    border-bottom: none;
+  }
+
+
